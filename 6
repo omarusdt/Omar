@@ -1,0 +1,48 @@
+double Prof(int OrdType, double TP_)
+  {
+   double Zena=0;
+   if(TP_==0) return (Zena);
+   if(TP_>0 && TP_<MarketInfo(Symbol(),MODE_STOPLEVEL))
+      TP_=MarketInfo(Symbol(),MODE_STOPLEVEL);
+      
+   if(OrdType==0)
+      Zena=Ask+TP_*Point;
+   if(OrdType==1)
+      Zena=Bid-TP_*Point;
+   return (Zena);
+  }
+
+int OrderSet(int type, double lot1_, double open, int slippage_, int SL_, int TP_, string com, int MN_, int time, color col)
+  {
+   int ticket_60 = 0;
+   int error_64 = 0;
+   int i = 0;
+   int Li_72 = 100;
+   switch(type)
+     {
+      case 0:
+            for(i = 0; i < Li_72; i++)
+              {
+               ticket_60 = OrderSend(Symbol(), OP_BUY, lot1_, open, slippage_, Prof(1, SL_), Prof(type, TP_), com, MN_, time, col);
+               error_64 = GetLastError();
+               if(error_64 == 0/* NO_ERROR */)
+                  break;
+               if(!((error_64 == 4/* SERVER_BUSY */ || error_64 == 137/* BROKER_BUSY */ || error_64 == 146/* TRADE_CONTEXT_BUSY */ || error_64 == 136/* OFF_QUOTES */)))
+                  break;
+               Sleep(5000);
+              }
+         break;
+      case 1:
+            for(i = 0; i < Li_72; i++)
+              {
+               ticket_60 = OrderSend(Symbol(), OP_SELL, lot1_, open, slippage_, Prof(0, SL_), Prof(type, TP_), com, MN_, time, col);
+               error_64 = GetLastError();
+               if(error_64 == 0/* NO_ERROR */)
+                  break;
+               if(!((error_64 == 4/* SERVER_BUSY */ || error_64 == 137/* BROKER_BUSY */ || error_64 == 146/* TRADE_CONTEXT_BUSY */ || error_64 == 136/* OFF_QUOTES */)))
+                  break;
+               Sleep(5000);
+              }
+         break;
+  }
+   return (ticket_60);
