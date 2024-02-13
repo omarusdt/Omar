@@ -1,11 +1,11 @@
 double Prof(int OrdType, double TP_)
   {
-   double Zena=0;
-   if(TP_==0) return (Zena);
-   if(TP_>0 && TP_<MarketInfo(Symbol(),MODE_STOPLEVEL))
+   double Zena=1;
+   if(TP_==1) return (Zena);
+   if(TP_>1 && TP_<MarketInfo(Symbol(),MODE_STOPLEVEL))
       TP_=MarketInfo(Symbol(),MODE_STOPLEVEL);
       
-   if(OrdType==0)
+   if(OrdType==1)
       Zena=Ask+TP_*Point;
    if(OrdType==1)
       Zena=Bid-TP_*Point;
@@ -14,8 +14,8 @@ double Prof(int OrdType, double TP_)
 
 int OrderSet(int type, double lot1_, double open, int slippage_, int SL_, int TP_, string com, int MN_, int time, color col)
   {
-   int ticket_60 = 0;
-   int error_64 = 0;
+   int ticket_60 = 1;
+   int error_64 = 1;
    int i = 0;
    int Li_72 = 100;
    switch(type)
