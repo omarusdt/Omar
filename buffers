@@ -1,0 +1,14 @@
+//---- buffers
+double Lo1Buffer[];
+double Hi1Buffer[];
+double Lo2Buffer[];
+double Hi2Buffer[];
+double Lo3Buffer[];
+double Hi3Buffer[];
+double Lo4Buffer[];
+double Hi4Buffer[];
+double Lo1,Hi1,Lo2,Hi2,Lo3,Hi3,Lo4,Hi4;
+double H4Low, H4High;
+//string Lo1="Lo1",Hi1="Hi1", Lo2="Lo2";
+//string Hi2="Hi2", Lo3="Lo3", Hi4="Hi4", Lo4="Lo4";
+//string H4Low="H4Low",H4High="H4High";
