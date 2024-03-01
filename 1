@@ -5,7 +5,13 @@
    SetIndexStyle(1, DRAW_HISTOGRAM);
    SetIndexBuffer(2, g_ibuf_120);
    if (TimeFrame == "calculate") {
-      gi_128 = TRUE;
+    IndicatorBuffers(3);
+   SetIndexBuffer(0, g_ibuf_2);
+   SetIndexStyle(0, DRAW_HISTOGRAM);
+   SetIndexBuffer(1, g_ibuf_6);
+   SetIndexStyle(1, DRAW_HISTOGRAM);
+   SetIndexBuffer(2, g_ibuf_120);
+   if (TimeFrame == "calculate") {
       return (0);
    }
    IndicatorBuffers(13);
