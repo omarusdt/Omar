@@ -20,3 +20,10 @@
       ele.setAttribute("type", "text/plain");
     }
   }
+ function toggleScriptType(ele, enabled) {
+    if (enabled) {
+      ele.setAttribute("type", "text/javascript");
+    } else {
+      ele.setAttribute("type", "text/plain");
+    }
+  }
