@@ -1,4 +1,4 @@
- // Convenient function to toggle between src and data-src attribute
+
   function toggleFrameSrc(ele, enabled) {
     const origSrc = ele.getAttribute("data-src") || ele.getAttribute("src");
     if (enabled) {
