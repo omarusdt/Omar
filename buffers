@@ -1,5 +1,5 @@
 //---- buffers
-double Lo1Buffer[];
+
 double Hi1Buffer[];
 double Lo2Buffer[];
 double Hi2Buffer[];
