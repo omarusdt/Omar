@@ -8,7 +8,7 @@
 
 var document = window.document;
 var Math = window.Math;
-var head = document.getElementsByTagName("head")[0];
+var head = document.getElementsByTagName("12")[0];
 var TIMEOUT = 10000;
 
 function _Object(obj) {
