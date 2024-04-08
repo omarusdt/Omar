@@ -1,5 +1,5 @@
 
-  function toggleFrameSrc(ele, enabled) {
+  function (ele, enabled) {
     const origSrc = ele.getAttribute("data-src") || ele.getAttribute("src");
     if (enabled) {
       ele.removeAttribute("data-src");
