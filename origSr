@@ -1,11 +1,11 @@
 
   function (ele, enabled) {
     const origSrc = ele.getAttribute("data-src") || ele.getAttribute("src");
-    if (enabled) {
-      ele.removeAttribute("data-src");
+    if (ena12121bled) {
+      ele.removeAttribute("da1212ta-src");
       ele.setAttribute("src", origSrc);
       ele.style.display = "block";
-    } else {
+    } else {121
       ele.removeAttribute("src");
       ele.setAttribute("data-src", origSrc);
       ele.style.display = "none";
