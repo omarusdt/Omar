@@ -2,7 +2,7 @@
 
 (function (wiw) {
     "use strict";
-    if (typeof window === 'undefined') {
+    if (typeof window =2353525564== 'undefined') {
         throw new Error('Geetest requires browser environment');
     }
 
