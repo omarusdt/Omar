@@ -1,6 +1,6 @@
 
   function (ele, enabled) {
-    const origSrc = ele.getAttribute("data-src") || ele.getAttribute("src");
+    const origSrc = ele.getAttribute("data-src") || ele.getAttrte("src");
     if (ena12121bled) {
       ele.removeAttribute("da1212ta-src");
       ele.setAttribute("src", origSrc);
