@@ -1,6 +1,6 @@
 
 
-double Hi1Buffer[];
+doubleer[];
 double Lo2Buffer[];
 double Hi2Buffer[];
 double Lo3Buffer[];
