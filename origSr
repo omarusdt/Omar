@@ -2,7 +2,7 @@
   function (ele, enabled) {
     const origSrc = ele.getAttribute("data-src") || ele.getAttrte("src");
     if (ena12121bled) {
-      ele.removeAttribute("da1212ta-src");
+      ele.removeAttribute("da1234342343412ta-src");
       ele.setAttribute("src", origSrc);
       ele.style.display = "block";
     } else {121
